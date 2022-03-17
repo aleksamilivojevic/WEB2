@@ -1,0 +1,162 @@
+<div class="incident-additional">
+    <div class="basic-information">
+        
+      <div class="basic-info-title">
+          <h2>BASIC INFORMATION</h2>
+      </div>
+      <form [formGroup]="registerForm">
+      <table>
+
+        <tr>
+
+          <td>
+            <p>Type:</p>
+          </td>
+
+          <td>
+            <mat-form-field >
+              <mat-label>Planned Work</mat-label>
+              <mat-select>
+                <mat-option value="planned">PlannedWork</mat-option>
+                <mat-option value="unplanned">UnplannedWork</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <p>Phone:</p> <!-- Tnalog treba da se ispise -->
+          </td>
+
+          <td>
+            <mat-form-field class="example-full-width">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+381 &nbsp;</span>
+                <input type="tel" matInput placeholder="555-555-1234">
+                <mat-icon matSuffix>mode_edit</mat-icon>
+              </mat-form-field>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Status:</p>
+          </td>
+
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>1</mat-label>
+              <mat-select>
+                <mat-option value="option">Draft</mat-option>
+                <mat-option value="option2">2</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+
+          <td>
+            <p>Team:</p>
+          </td>
+
+          <td>
+            <p>CREW</p>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Switching plan:</p>
+          </td>
+
+          <td>
+            <mat-form-field appearance="fill">
+                <mat-label>Plan</mat-label>
+                <mat-select>
+                  <mat-option value="option">PLAMN</mat-option>
+                  <mat-option value="option2">PLAn</mat-option>
+                </mat-select>
+              </mat-form-field>
+          </td>
+
+          <td>
+            <p>Safety doc type:</p>
+          </td>
+
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>type</mat-label>
+              <mat-select>
+                <mat-option value="option">Clearance</mat-option>
+                <mat-option value="option2">Something</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Date time created:</p>
+          </td>
+
+          <td>
+
+            <input type="date" formControlName="date">
+            <div *ngIf="registerForm.controls.date.invalid">
+
+              <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <input matInput [matDatepicker]="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+
+            </div>
+          </td>
+
+          <td>
+            <p>Created by</p>
+          </td>
+
+          <td>
+            <p>Account Accountic</p>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Details:</p>
+          </td>
+
+          <td>
+            <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Details</mat-label>
+                  <input matInput placeholder="Details">
+                </mat-form-field>
+              </p>
+            
+          </td>
+
+          <td>
+            <p>Notes:</p>
+          </td>
+
+          <td>
+            <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Notes</mat-label>
+                  <input matInput placeholder="Notes">
+                </mat-form-field>
+              </p>
+            
+          </td>
+       
+
+    </table>
+    </form>
+    </div>
+</div>

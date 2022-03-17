@@ -1,0 +1,170 @@
+<body>
+    <div class="dashboard">
+        <div  class="dashboard1">
+            <div> 
+                <table class="my-table">
+                    <thead>
+                        <tr>
+                            <th>MY INCIDENTS</th>
+                            <th><i class="fas fa-exclamation-triangle" ></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Drafts
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Canceled
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Executing
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Completed
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    
+            </div>
+            <div>
+                <table class="my-table">
+                    <thead>
+                        <tr>
+                            <th>MY WORK PLANS</th>
+                            <th><i class="fas fa-exclamation-triangle" ></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Drafts
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Canceled
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Executing
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Completed
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table> 
+            </div>
+            <div>
+                <table class="my-table">
+                    <thead>
+                        <tr>
+                            <th>MY SAFETY DOCS</th>
+                            <th><i class="fas fa-exclamation-triangle" ></i></th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Drafts
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Canceled
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Executing
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                Completed
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table> 
+                </div>
+        </div>
+
+        <div class="dashboard2">
+            <div class="chart" style="width: 50%">
+                <h2> INCIDENTS</h2>
+                <i class="fas fa-cog" ></i>
+                <div style="display: block;">
+                    <canvas baseChart width="400" height="200"
+                      [datasets]="lineChartData"
+                      [labels]="lineChartLabels"
+                      [colors]="lineChartColors"
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType"
+                      [plugins]="lineChartPlugins">
+                    </canvas>
+                  </div>
+            </div>
+            <div class="chart" style="width: 50%">
+                <h2> DOCUMENTS</h2>
+                <div >
+                    <canvas baseChart 
+                      [data]="pieChartData" 
+                      [labels]="pieChartLabels" 
+                      [chartType]="pieChartType"
+                      [options]="pieChartOptions"
+                      [plugins]="pieChartPlugins"
+                      [legend]="pieChartLegend">
+                    </canvas>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+

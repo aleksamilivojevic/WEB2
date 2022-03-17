@@ -1,0 +1,120 @@
+<div class="incident-additional">
+    <table>
+    
+        <tr>
+    
+          <td>
+            <p>Type:</p>
+          </td>
+    
+          <td>
+            <mat-form-field >
+              <mat-label>Type:</mat-label>
+              <mat-select [(ngModel)]="selectedType" (selectionChange)="onCauseChange($event)">
+                <mat-option value="Switch">Switch</mat-option>
+                <mat-option value="Transformator">Transformator</mat-option>
+                <mat-option value="Fuse">Fuse</mat-option>
+                <mat-option value="Dissconector">Dissconector</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+    
+        </tr>
+        
+          <tr>
+    
+            <td>
+              <p>Name:</p>
+            </td>
+      
+            <td>
+              <div>
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label></mat-label>
+                    <input matInput placeholder="Name" [(ngModel)]="name" readonly>
+                  </mat-form-field>
+                </p>
+              </div>
+            </td>
+      
+          </tr>
+    
+          <tr>
+    
+            <td>
+              <p>Address:</p>
+            </td>
+      
+            <td>
+              <div>
+                <p>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Select Address</mat-label>
+                    <mat-select [(ngModel)]="selectedStreet">
+                      <mat-option *ngFor="let item of streets" [value]="item.name">
+                        {{item.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+              </div>
+            </td>
+      
+          </tr>
+          <tr>
+    
+            <td>
+              <p>Coordinates:</p>
+            </td>
+      
+            <td>
+              <div>
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label></mat-label>
+                    <input matInput placeholder="Coordinates">
+                  </mat-form-field>
+                </p>
+              </div>
+            </td>
+      
+          </tr>
+          <td></td>
+          <td><button class="btn-regular" (click)="onSubmit()">Add</button></td>
+
+          <tr>
+    
+            <td>
+                <div class="example-container">
+                    <h2>Device</h2>
+                  
+                    <div
+                      cdkDropList
+                      #todoList="cdkDropList"
+                      [cdkDropListData]="team"
+                      [cdkDropListConnectedTo]="[doneList]"
+                      class="example-list"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="example-box" *ngFor="let item of team" cdkDrag>{{item}}</div>
+                    </div>
+                  </div>
+                  
+                  <div class="example-container">
+                    <h2>Added devices</h2>
+                  
+                    <div
+                      cdkDropList
+                      #doneList="cdkDropList"
+                      [cdkDropListData]="workers"
+                      [cdkDropListConnectedTo]="[todoList]"
+                      class="example-list"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="example-box" *ngFor="let item of workers" cdkDrag>{{item}}</div>
+                    </div>
+                  </div>
+            </td>
+    
+          <tr>
+    </table>
+</div>

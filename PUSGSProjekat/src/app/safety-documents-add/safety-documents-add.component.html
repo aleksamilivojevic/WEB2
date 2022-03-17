@@ -1,0 +1,37 @@
+<body>
+    <div class="sidebar-menu">
+        <div class="sidebar-menu__top">
+                    <ul class="sidebar-menu__top__links">
+                        <li>
+                            <a routerLink="safety-documents-basic-info">
+                                
+                                <div class="triger"><span>Basic Information</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="safety-documents-history" >
+                                <div class="triger"><span>History of state changes</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="safety-documents-multimedia">
+                                <div class="triger"><span>Multimedia attachments</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="safety-documents-equipment">
+                                <div class="triger"><span>Equipment</span></div>
+                            </a>
+                        </li>   
+                        <li>
+                            <a routerLink="safety-documents-checklist">
+                                <div class="triger"><span>Checklist</span></div>
+                            </a>
+                        </li>            
+                    </ul>
+                    
+                <button class="btn" (click)="onSubmit()">Save</button>
+        </div>
+    </div>
+    <div><router-outlet></router-outlet></div>
+</body>

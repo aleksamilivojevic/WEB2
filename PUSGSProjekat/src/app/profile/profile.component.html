@@ -1,0 +1,99 @@
+<body>
+
+    <div class="registration" >
+
+        <div class="column">
+
+            <h2 class="registration-header">Account</h2>
+            <h2>Personal information</h2>
+            <form [formGroup]="registerForm">
+            
+            
+                <div class="registration-first_name">
+                    <input type="text" placeholder="First Name" formControlName="firstName">
+                    <div *ngIf="registerForm.controls.firstName.invalid">
+                        Please enter valid username
+                    </div>
+                </div> 
+
+                <div class="registration-last_name">
+                    <input type="text" placeholder="Last Name" formControlName="lastName">
+                    <div *ngIf="registerForm.controls.lastName.invalid">
+                        Please enter valid username
+                    </div>
+                </div>
+
+                <div class="registration-address">
+                    <input type="text" placeholder="Address" formControlName="address">
+                    <div *ngIf="registerForm.controls.address.invalid">
+                        Please enter valid username
+                    </div>
+                </div>
+                
+                <div class="registration-username">          
+                    <input type="text" placeholder="Username" formControlName="username">
+                    <div *ngIf="registerForm.controls.username.invalid">
+                        Please enter valid username
+                    </div>
+                </div>
+
+                <div class="registration-email">
+                    <input type="text" placeholder="Email" formControlName="email">
+                    <div *ngIf="registerForm.controls.email.invalid">
+                        Please enter valid username
+                    </div>
+                </div>
+
+                <div class="registration-password">
+                    <input type="password" placeholder="New Password" formControlName="password">
+                    <div *ngIf="registerForm.controls.password.invalid">
+                        Please enter valid password
+                    </div>
+                </div>
+
+                <div class="registration-password">
+                    <input type="password" placeholder="Old Password" formControlName="repeat">
+                    <div *ngIf="registerForm.controls.repeat.invalid">
+                        Please enter valid username
+                    </div>
+                </div>        
+            
+                <div class="registration-date">
+                    <input type="date" formControlName="date">
+                    <div *ngIf="registerForm.controls.date.invalid">
+                        Please enter valid username
+                    </div>
+                </div>
+            </form>
+
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Role</mat-label>
+                    <mat-select [(ngModel)]="selectedRole">
+                        <mat-option value="Dispatcher">Dispatcher</mat-option>
+                        <mat-option value="Crew Member">Crew Member</mat-option>
+                        <mat-option value="Worker">Worker</mat-option>
+                    </mat-select>
+                    </mat-form-field>
+            </div>
+
+            <div *ngIf="selectedRole=='Crew Member'">
+                <mat-form-field appearance="fill">
+                <mat-label>Select Crew</mat-label>
+                <mat-select [(ngModel)]="selectedCrew">
+                    <mat-option *ngFor="let item of crews" [value]="item.id">
+                    {{item.name}}
+                    </mat-option>
+                </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="registration-submit">
+                <button mat-button (click)="onSubmit()" >Change</button>
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>

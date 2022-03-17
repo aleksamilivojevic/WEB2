@@ -1,0 +1,246 @@
+<div class="incident-additional">
+    <div class="basic-information">
+        
+      <div class="basic-info-title">
+          <h2>BASIC INFORMATION</h2>
+      </div>
+      <form [formGroup]="registerForm">
+      <table>
+
+        <tr>
+
+          <td>
+            <p>Type:</p>
+          </td>
+
+          <td>
+            <mat-form-field >
+              <mat-label>Planned Work</mat-label>
+              <mat-select>
+                <mat-option value="planned">PlannedWork</mat-option>
+                <mat-option value="unplanned">UnplannedWork</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <p>Work document:</p> <!-- Tnalog treba da se ispise -->
+          </td>
+
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>1</mat-label>
+              <mat-select>
+                <mat-option value="option">1</mat-option>
+                <mat-option value="option2">2</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Status:</p>
+          </td>
+
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>1</mat-label>
+              <mat-select>
+                <mat-option value="option">Draft</mat-option>
+                <mat-option value="option2">2</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+
+          <td>
+            <p>Adress:</p>
+          </td>
+
+          <td>
+            <div><!-- 
+              <p> 
+                <mat-form-field appearance="fill">
+                  <mat-label>Select Address</mat-label>
+                  <mat-select [(ngModel)]="selectedStreet">
+                    <mat-option *ngFor="let item of streets" [value]="item.name">
+                      {{item.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </p>-->
+            </div>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Incident:</p>
+          </td>
+
+          <td>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Incident</mat-label>
+                <input matInput placeholder="Incident">
+              </mat-form-field>
+            </p>
+          </td>
+
+          <td>
+            <p>Team:</p>
+          </td>
+
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Team</mat-label>
+              <mat-select>
+                <mat-option value="option">Team1</mat-option>
+                <mat-option value="option2">Team2</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Start date/time:</p>
+          </td>
+
+          <td>
+
+            <input type="date" formControlName="date">
+            <div *ngIf="registerForm.controls.date.invalid">
+
+              <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <input matInput [matDatepicker]="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+
+            </div>
+          </td>
+
+          <td>
+            <p>End date/time</p>
+          </td>
+
+          <td>
+
+            <input type="date" formControlName="date">
+            <div *ngIf="registerForm.controls.date.invalid">
+
+              <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <input matInput [matDatepicker]="picker3">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+              </mat-form-field>
+
+            </div>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Why:</p>
+          </td>
+
+          <td>
+            <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Why</mat-label>
+                  <input matInput placeholder="Why">
+                </mat-form-field>
+              </p>
+            
+          </td>
+
+        </tr>
+        <tr>
+
+            <td>
+              <p>Notes:</p>
+            </td>
+  
+            <td>
+              <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Notes</mat-label>
+                    <input matInput placeholder="Notes">
+                  </mat-form-field>
+                </p>
+              
+            </td>
+  
+          </tr>
+          <tr>
+
+            <td>
+              <p>Company:</p>
+            </td>
+  
+            <td>
+              <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Company</mat-label>
+                    <input matInput placeholder="Company">
+                  </mat-form-field>
+                </p>
+              
+            </td>
+  
+          </tr>
+          <tr>
+
+            <td>
+              <p>Number:</p>
+            </td>
+  
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Telephone</mat-label>
+                    <span matPrefix>+381 &nbsp;</span>
+                    <input type="tel" matInput placeholder="555-555-1234">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                  </mat-form-field>
+              
+            </td>
+  
+          </tr>
+          <tr>
+
+            <td>
+              <p>Date/tiem created:</p>
+            </td>
+  
+            <td>
+                <input type="date" formControlName="date">
+            <div *ngIf="registerForm.controls.date.invalid">
+
+              <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+            </div>
+              
+            </td>
+  
+          </tr>
+
+       
+
+    </table>
+    </form>
+    </div>
+</div>

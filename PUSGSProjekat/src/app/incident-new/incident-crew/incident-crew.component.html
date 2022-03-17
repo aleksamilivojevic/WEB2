@@ -1,0 +1,12 @@
+<div class="incident-additional">
+    <h2>CREW</h2>
+      <mat-form-field appearance="fill">
+      <mat-label>Select Crew</mat-label>
+      <mat-select [(ngModel)]="selectedCrew">
+          <mat-option *ngFor="let item of crews" [value]="item.id">
+          {{item.name}}
+          </mat-option>
+      </mat-select>
+      </mat-form-field>
+    
+  </div>

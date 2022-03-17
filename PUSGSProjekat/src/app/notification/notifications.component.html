@@ -1,0 +1,40 @@
+<body>
+    <div class="sidebar-menu">
+        <div class="sidebar-menu__top">
+                    <ul class="sidebar-menu__top__links">
+                        <li>
+                            <a routerLink="notifications-all">
+                                
+                                <div class="triger"><span>All notifications</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="incident-devices" >
+                                <div class="triger"><span>Unread notifications</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="incident-resolution">
+                                <div class="triger"><span>Errors   </span><i class="fas fa-times-circle" style="color: red;"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="incident-calls">
+                                <div class="triger"><span>Info   </span><i class="fas fa-info-circle" style="color:paleturquoise;"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="incident-crew">
+                                <div class="triger"><span>Success  </span><i class="fas fa-check-circle" style="color: green;"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="incident-multimedia">
+                                <div class="triger"><span>Warnings  </span><i class="fas fa-exclamation-triangle" style="color: yellow;"></i></div>
+                            </a>
+                        </li>                   
+                    </ul>
+        </div>
+    </div>
+    <div><router-outlet></router-outlet></div>
+</body>

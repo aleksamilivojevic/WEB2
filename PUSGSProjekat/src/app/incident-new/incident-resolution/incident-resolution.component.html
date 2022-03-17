@@ -1,0 +1,66 @@
+<div class="incident-additional">
+    <div class="basic-information">
+        
+      <div class="basic-info-title">
+          <h2>RESOLUTION</h2>
+      </div>
+
+
+      <table id="resolutiontable">
+        <tr>
+          <td>Cause:</td>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Select Cause</mat-label>
+              <mat-select [(ngModel)]="selectedCause" (selectionChange)="onCauseChange($event)">
+                <mat-option *ngFor="let item of causes" [value]="item">
+                  {{item}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </td>
+        </tr>
+
+        <tr>
+          <td>Subcause:</td>
+            <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Select SubCause</mat-label>
+              <mat-select [(ngModel)]="selectedSubCause">
+                <mat-option *ngFor="let item of subCauses" [value]="item">
+                  {{item}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Construction type:</td>
+          <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <mat-select [(ngModel)]="selectedConstruction">
+              <mat-option value="Underground">Underground</mat-option>
+              <mat-option value="Overground">Overground</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        </tr>
+
+        <tr>
+          <td>Material:</td>
+          <td><mat-form-field appearance="fill">
+            <mat-label>Material</mat-label>
+            <mat-select [(ngModel)]="selectedMaterial">
+              <mat-option value="Metal">Metal</mat-option>
+              <mat-option value="Plastic">Plastic</mat-option>
+              <mat-option value="Wood">Wood</mat-option>
+            </mat-select>
+          </mat-form-field></td>
+        </tr>
+
+      </table>
+
+  </div>
+</div>

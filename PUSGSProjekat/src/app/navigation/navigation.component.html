@@ -1,0 +1,22 @@
+<div class="header" *ngIf="show">
+    <div id="sidebar-triger" class="toogle-sidebar"><i class="fas fa-bars"></i></div>
+    <div class="main-header clearfix">
+        <div class="main-header__left">
+            <div class="logo">
+                <i class="fab fa-accusoft"></i>
+            </div>
+            <div class="page-title">
+                <p>{{title}}</p>
+            </div>
+        </div>
+        <div class="main-header__right">
+            <div class="main-header__account">
+                <p>{{userFullName}}</p>
+                <a (click)="logout()">LogOut</a>
+            </div>
+            <div class="main-header__account-options">
+                <a href="/profile"><i class="fas fa-user-alt"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

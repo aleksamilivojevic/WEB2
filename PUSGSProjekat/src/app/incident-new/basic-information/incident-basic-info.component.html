@@ -1,0 +1,176 @@
+<div class="incident-additional">
+    <div class="basic-information">
+        
+      <div class="basic-info-title">
+          <h2>BASIC INFORMATION</h2>
+      </div>
+      <table>
+
+        <tr>
+
+          <td>
+            <p>Incident ID:</p>
+          </td>
+
+          <td>
+            <p>System Generated</p>
+          </td>
+
+          <td>
+            <p>Affected customers:</p>
+          </td>
+
+          <td>
+              <mat-form-field appearance="outline">
+                <mat-label>Affected customers</mat-label>
+                <input matInput placeholder="Affected customers" readonly [(ngModel)]="inc.affectedCustomers">
+              </mat-form-field>         
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Type:</p>
+          </td>
+
+          <td>
+            <mat-form-field >
+              <mat-label>Type</mat-label>
+              <mat-select [(ngModel)]="inc.type">
+                <mat-option value="Planned">PlannedWork</mat-option>
+                <mat-option value="Unplanned">UnplannedWork</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+
+          <td>
+            <p>Scheduled time:</p>
+          </td>
+
+          <td>
+              <mat-form-field appearance="fill">
+                <mat-label>Scheduled Time</mat-label>
+                <input matInput [matDatepicker]="picker3" [(ngModel)]="inc.scheduledTime">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+              </mat-form-field>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Priority:</p>
+          </td>
+
+          <td>
+            <mat-form-field appearance="outline">
+              <mat-label>Priority</mat-label>
+              <input matInput placeholder="Priority" readonly [(ngModel)]="inc.priority">
+            </mat-form-field> 
+          </td>
+
+          <td>
+            <p>ETR:</p>
+          </td>
+
+          <td>
+            <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>ETR</mat-label>
+                  <input matInput [matDatepicker]="picker2" [(ngModel)]="inc.etr">
+                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                  <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Confirmed:</p>
+          </td>
+
+          <td>
+            <mat-slide-toggle [(ngModel)]="inc.confirmed"></mat-slide-toggle>
+          </td>
+
+          <td>
+            <p>Calls:</p>
+          </td>
+
+          <td>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Calls</mat-label>
+                <input matInput placeholder="0" readonly [(ngModel)]="inc.calls">
+              </mat-form-field>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>Status:</p>
+          </td>
+
+          <td>
+            <p>{{inc.status}}</p>
+          </td>
+
+          <td>
+            <p>Voltage:</p>
+          </td>
+
+          <td>
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Voltage</mat-label>
+                  <input matInput placeholder="0" [(ngModel)]="inc.voltage">
+                </mat-form-field>
+              </p>
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <p>ETA:</p>
+          </td>
+
+          <td>
+              <mat-form-field appearance="fill">
+                <mat-label>ETA</mat-label>
+                <input matInput [matDatepicker]="picker4" [(ngModel)]="inc.eta">
+                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                <mat-datepicker #picker4></mat-datepicker>
+              </mat-form-field>
+          </td>
+
+          <td>
+            <p>ATA:</p>
+          </td>
+
+          <td>
+              <mat-form-field appearance="fill">
+                <mat-label>ATA</mat-label>
+                <input matInput [matDatepicker]="picker5" disabled  [(ngModel)]="inc.ata">
+                <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                <mat-datepicker #picker5 disabled="false"></mat-datepicker>
+              </mat-form-field>       
+          </td>
+
+        </tr>
+
+
+    </table>
+    </div>
+</div>

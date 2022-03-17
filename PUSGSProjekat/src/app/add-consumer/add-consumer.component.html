@@ -1,0 +1,168 @@
+<body>
+    <table class="buttons" id="dugmici" >
+        <tr>
+          <td><button class="btn-regular">Table</button></td>
+        </tr>
+      </table>
+    <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+      </mat-form-field>
+      
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort id="tab">
+      
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          </ng-container>
+      
+          <!-- Progress Column -->
+          <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+            <td mat-cell *matCellDef="let row"> {{row.type}} </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="voltage">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Voltage </th>
+            <td mat-cell *matCellDef="let row"> {{row.voltage}} </td>
+          </ng-container>
+      
+          <!-- Fruit Column -->
+          <ng-container matColumnDef="scheduledTime">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Scheduled Time </th>
+            <td mat-cell *matCellDef="let row"> {{row.scheduledTime}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+<p></p>
+      <table class="tabela3">
+          <tr><h1>Add customer</h1></tr>
+        <tr>
+    
+            <td>
+              <p>Name:</p>
+            </td>
+      
+            <td>
+              <div>
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label></mat-label>
+                    <input matInput placeholder="Name">
+                  </mat-form-field>
+                </p>
+              </div>
+            </td>
+      
+          </tr>
+          <tr>
+    
+            <td>
+              <p>Surname:</p>
+            </td>
+      
+            <td>
+              <div>
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label></mat-label>
+                    <input matInput placeholder="Surname">
+                  </mat-form-field>
+                </p>
+              </div>
+            </td>
+      
+          </tr>
+        <tr>
+    
+          <td>
+            <p>Address</p>
+          </td>
+    
+          <td>
+            <div><!-- 
+              <p> 
+                <mat-form-field appearance="fill">
+                  <mat-label>Select Address</mat-label>
+                  <mat-select [(ngModel)]="selectedStreet">
+                    <mat-option *ngFor="let item of streets" [value]="item.name">
+                      {{item.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </p>-->
+            </div>
+          </td>
+    
+        </tr>
+        
+          <tr>
+    
+            <td>
+              <p>Number:</p>
+            </td>
+      
+            <td>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Telephone</mat-label>
+                    <span matPrefix>+1 &nbsp;</span>
+                    <input type="tel" matInput placeholder="555-555-1234">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                  </mat-form-field>
+              </div>
+            </td>
+      
+          </tr>
+    
+          <tr>
+    
+            <td>
+              <p>Id nalog:</p>
+            </td>
+      
+            <td>
+              <div>
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label></mat-label>
+                    <input matInput placeholder="Id">
+                  </mat-form-field>
+                </p>
+              </div>
+            </td>
+      
+          </tr>
+          <tr>
+    
+            <td>
+                <p>Type of nalog</p>
+              </td>
+        
+              <td>
+                <mat-form-field >
+                  <mat-label>Type:</mat-label>
+                  <mat-select>
+                    <mat-option value="Rezidental">Rezidental</mat-option>
+                    <mat-option value="Commercial">Commercial</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+      
+          </tr>
+          <td><button class="btn-regular">Add</button></td>
+    </table>
+</body>

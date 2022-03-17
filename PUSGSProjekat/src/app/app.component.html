@@ -1,0 +1,8 @@
+<div class="main">
+   <app-navigation *ngIf="currentTitle !== 'Login'" [title]="currentTitle"></app-navigation>
+   <app-sidebar *ngIf="currentTitle !== 'Login'"></app-sidebar>
+   <div class="router">
+     <router-outlet></router-outlet>
+   </div>  
+ </div>
+ 

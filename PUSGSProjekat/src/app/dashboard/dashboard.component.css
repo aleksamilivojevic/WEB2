@@ -1,0 +1,90 @@
+a {
+    text-decoration: none;
+    color: 07171e;
+  }
+  
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+    text-align: left;
+    color:#07171e;
+  }
+
+
+  body{
+    width: 1000px;
+    height: auto;
+    /* position: fixed; 
+    top: 20%;  
+    left: 50%; */
+    /* transform: translate(-50%, -10%); */  /* NE STAVLJATI OVE STVARI POGOTOVO NE FIXED I ABSOLUTE NA BODY */
+    overflow-y: scroll;
+    overflow: hidden;
+    background-color: #00202e;
+    text-align:center;
+    margin: 0 auto;
+  }
+  .my-table {
+    background-color: #07171e; 
+    border-radius: 10px;
+    
+  }
+
+.dashboard1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px; /* NA OVAJ NACIN ODVAJAJ OD GORENJE IVICE..ZNACI NE NA BODY NEGO NA PRVI ELEMENT ISPOD BODY*/
+  
+}
+
+.dashboard2 {
+  display: flex; 
+  justify-content: space-between;
+  padding-top: 20px;
+
+}
+
+.my-table thead th {
+    background: #07171e;
+    color: #ffb336; 
+    border-radius: 10px;
+    border: 6px solid #07171e;   
+    
+}
+
+.my-table tbody td {
+    background: #ffb336;
+    color: #00202e;    
+    width: 150px;
+    height: 35px;
+    border-radius: 1px;
+    border-radius: 5px;
+    
+}
+
+
+
+
+.chart{
+  background-color: #ffb336 ;
+  width: 480px;
+  height: 300px;
+  margin-top: 5px;
+  border-color: #07171e;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 4px solid #07171e;
+  text-align: left;
+}
+
+
+
+  
+
+
+
+
+
+
+
+

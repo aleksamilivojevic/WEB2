@@ -1,0 +1,238 @@
+<div class="incident-additional">
+    <div class="basic-information">
+
+        <div class="basic-info-title">
+            <h2>BASIC INFORMATION</h2>
+        </div>
+        <div [formGroup]="registerForm">
+            <table>
+
+                <tr>
+
+                    <td>
+                        <p>Type:</p>
+                    </td>
+
+                    <td>
+                        <mat-form-field>
+                            <mat-label>Planned Work</mat-label>
+                            <mat-select>
+                                <mat-option value="planned">PlannedWork</mat-option>
+                                <mat-option value="unplanned">UnplannedWork</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+
+                    <td>
+                        <p>Emergency work:</p>
+                    </td>
+
+                    <td>
+                        <mat-slide-toggle></mat-slide-toggle>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>Incident ID:</p>
+                    </td>
+
+                    <td>
+                        <p>id</p>
+                    </td>
+
+                    <td>
+                        <p>Status</p>
+                    </td>
+
+                    <td>
+                        <p>Draft</p>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td>
+                        <p>Type of work:</p>
+                    </td>
+
+                    <td>
+                        <mat-form-field appearance="fill">
+                            <mat-label>1</mat-label>
+                            <mat-select>
+                                <mat-option value="option">1</mat-option>
+                                <mat-option value="option2">2</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+
+                    <td>
+                        <p>Company:</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label></mat-label>
+                                    <input matInput placeholder="Company">
+                                </mat-form-field>
+                            </p>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>Start Date/time:</p>
+                    </td>
+
+                    <td>
+                        <div>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Select</mat-label>
+                                <input matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <p>Incident:</p>
+                    </td>
+
+                    <td>
+                        <p>id</p>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>End Date/time:</p>
+                    </td>
+
+                    <td>
+
+                        <div>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Select</mat-label>
+                                <input matInput [matDatepicker]="picker1">
+                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>Phone No:</p>
+                    </td>
+
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Telephone</mat-label>
+                            <span matPrefix>+1 &nbsp;</span>
+                            <input type="tel" matInput placeholder="555-555-1234">
+                            <mat-icon matSuffix>mode_edit</mat-icon>
+                        </mat-form-field>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>Created by:</p>
+                    </td>
+
+                    <td>
+                        <p> Ime</p>
+                    </td>
+
+                    <td>
+                        <p>Date time created:</p>
+                    </td>
+                    <td>
+
+                        <div>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Select</mat-label>
+                                <input matInput [matDatepicker]="picker2">
+                                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </td>
+
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>Purpose:</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label></mat-label>
+                                    <input matInput placeholder="Affected customers">
+                                </mat-form-field>
+                            </p>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td>
+                        <p>Details:</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label></mat-label>
+                                    <input matInput placeholder="Affected customers">
+                                </mat-form-field>
+                            </p>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td>
+                        <p>Notes:</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label></mat-label>
+                                    <input matInput placeholder="Affected customers">
+                                </mat-form-field>
+                            </p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>

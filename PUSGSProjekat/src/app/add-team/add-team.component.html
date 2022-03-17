@@ -1,0 +1,58 @@
+<body>
+    <table>
+    
+        <tr>
+    
+          <td>
+            <p>Name:</p>
+     
+            <div>
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Name</mat-label>
+                  <input matInput placeholder="Name" [(ngModel)]="name">
+                </mat-form-field>
+              </p>
+            </div>
+          </td>
+    
+        </tr>
+          <tr>
+    
+            <td>
+                <div class="example-container">
+                    <h2>New Team</h2>
+                  
+                    <div
+                      cdkDropList
+                      #todoList="cdkDropList"
+                      [cdkDropListData]="selectedWorkers"
+                      [cdkDropListConnectedTo]="[doneList]"
+                      class="example-list"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="example-box" *ngFor="let item of selectedWorkers" cdkDrag>{{item.fullName}}</div>
+                    </div>
+                  </div>
+                  
+                  <div class="example-container">
+                    <h2>Workers</h2>
+                  
+                    <div
+                      cdkDropList
+                      #doneList="cdkDropList"
+                      [cdkDropListData]="workers"
+                      [cdkDropListConnectedTo]="[todoList]"
+                      class="example-list"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="example-box" *ngFor="let item of workers" cdkDrag>{{item.fullName}}</div>
+                    </div>
+                  </div>
+            </td>
+    
+          <tr>
+            
+          <tr>
+            <td><button class="btn-regular" (click)="onSubmit()">Add</button></td>
+          </tr>
+    </table>
+    </body>

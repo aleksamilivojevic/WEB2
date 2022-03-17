@@ -1,0 +1,162 @@
+p, h1, h2, h3, h4, h5 
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #319197;
+    padding: 20px;   
+}
+
+body 
+{
+    height: auto;   
+    margin: 0;
+    display: grid;
+    place-items: initial;   
+    width: auto;
+    position: fixed; 
+    top: 10%;  
+    left: 5%;
+}
+
+.btn-regular:hover {
+    
+    text-decoration: none;
+    
+}
+
+.sidebar-menu 
+{
+    position: fixed;
+    /*background-color: #ffb336;*/
+    background: linear-gradient(to left, #ffb336, #ba102a, #8d274a, #319197);
+    margin: 0;
+    
+    display: inline;
+    border-radius: 25px;
+   
+    
+}
+
+.sidebar-menu__top__links 
+{
+    list-style-type: none;
+    text-align: left;
+    
+    
+}
+
+.sidebar-menu__top
+{
+    margin:5px;
+    
+    height: auto;
+    border-radius: 25px;
+    background: #07171e;
+    color: #113d3c; 
+    text-align: center;
+    /*padding-right: 35px;*/
+    padding:20px;
+       
+}
+
+.sidebar-menu__top__links li:hover 
+{
+    text-align: left;
+}
+
+.sidebar-menu__top__links li:hover i 
+{
+    color: #ffb336;
+}
+
+.sidebar-menu__top__links li:hover span 
+{
+    color: #f86f1a;
+} 
+
+.sidebar-menu__top__links a 
+{
+    display: inline-block;
+    height: 20px;
+    padding: 13px 0;  
+    
+      
+}
+
+.sidebar-menu__top__links div 
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sidebar-menu__top__links .triger 
+{
+    
+    color: #ffb336;
+    width: 200px;
+    text-align: left;
+}
+
+.sidebar-menu__top__links .triger i 
+{
+    font-size: 25px;
+}
+
+.sidebar-menu__top__links .data 
+{
+    display: none;
+    width: 150px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.sidebar-menu__top__links .data.show 
+{
+    display: inline-block;
+}
+
+.sidebar-menu__top__links li:hover .data 
+{
+    display: inline-block;
+    position: absolute;
+    background-color: #ffb336;
+    padding: 14.5px;
+    transform: translate(0, -13px);  
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    
+}
+
+.sidebar-menu__bottom 
+{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    padding-left: 8px;
+}
+
+.btn{
+    width: 230px;
+    padding: 10px;
+    
+    border-radius: 10px;
+    margin: 5px 0;
+    
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    text-decoration: none; /* remove underline from anchors */
+    text-align:center;
+
+    background-color: #ffb336;
+    color: #07171e;
+    cursor: pointer;
+
+    border: none;
+    outline:none;
+    box-shadow: 0 3px 0 #f86f1a;
+}
+
+.btn:hover{
+    background-color: #f86f1a;
+}

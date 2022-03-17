@@ -1,0 +1,25 @@
+
+.incident-additional {
+    position: absolute;
+    left: 310px;
+    border: 4px solid #07171e;
+    background: #ffb336;
+   
+    border-radius: 25px;
+    width: 900px;
+    height: 600px;
+    color:#319197;
+    padding: 0 20px;
+    box-sizing: border-box;
+  
+}
+
+
+
+p, h1, h2, h3, h4, h5 
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #07171e;
+    padding: 20px;   
+}

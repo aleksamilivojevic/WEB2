@@ -1,0 +1,138 @@
+p, h1, h2, h3, h4, h5 
+{
+    margin: 0;
+    font-family: sans-serif;
+    color: #319197;
+    padding: 20px;   
+}
+
+body 
+{
+    height: auto;   
+    margin: 0;
+    display: grid;
+    place-items: center;   
+    width: auto;
+    /* position: fixed; 
+    top: 80%;  
+    left: 50%;
+    transform: translate(-50%, -60%);    */
+
+    
+    overflow-y: scroll;
+    overflow: hidden;
+
+    background-color: #07171e;
+    text-align:center;
+    /* position:absolute; */
+    
+}
+
+.registration
+{   
+    background: linear-gradient(to left, #ffb336, #ba102a, #8d274a, #319197);
+    margin: 0;
+    /* width: 90%;  */
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    line-height: 60px;
+    align-self: center;
+    border-radius: 25px;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.registration-header
+{
+    align-content:space-around;
+}
+
+/*type*/
+input[type="text"]
+{
+    width:400px;
+    height: 30px; 
+    color: #ffb336;
+    border: none;
+    border-bottom: 1px solid #319197;
+    background: transparent; 
+    font-weight: bold;   
+}
+
+input[type="password"]
+{
+    width:400px;
+    height: 30px;  
+    color: #ffb336; 
+    border: none;
+    border-bottom: 1px solid #113d3c;
+    background: transparent; 
+    font-weight: bold;
+}
+
+input[type="date"]
+{
+    width:400px;
+    height: 30px;   
+    border: none;
+    color: #ffb336;
+    border-bottom: 1px solid #113d3c;
+    background: transparent;
+    color: #686b6b;
+    font-weight: bold;    
+}
+
+input[type="register"]
+{
+    width:400px;
+    height: 30px; 
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;  
+}
+
+
+.column {   
+    width: 600px;
+    height: 100%;
+    border-radius: 25px;
+    background: #07171e;
+    color: #113d3c;       
+}
+  
+.login
+{
+    background: #07171e;
+}
+
+.registration-submit
+{
+    font-size: 14px;
+    
+    width: 25%;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #ffb336;
+    color:#07171e;
+    text-align: center;
+    margin-left: 37.5%;
+    
+
+
+}
+
+.mat-form-field 
+{
+  font-size: 14px;
+  align-content: center;
+  width: 25%;
+  border-radius: 10px;
+  height: 50px;
+  background-color: #ffb336;
+  text-align: center;
+  
+}
+
+
+
